@@ -1,5 +1,7 @@
 <?php
-
+/** Lectura de archivos .env */
+require_once "core/dotenv.php";
+(new DotEnv('.env'))->load();
 /** Zona Horaria */
 date_default_timezone_set('US/Central');
 
@@ -12,7 +14,7 @@ if (!isset($_REQUEST['controller']) || !isset($_REQUEST['action'])) {
   $action = $_REQUEST['action'];
   $document = 'controller/' . $controller . '_controller.php';
 
-  if( file_exists($document)) {
+  if (file_exists($document)) {
     require_once $document;
     $controller = ucwords($controller) . 'Controller';
     $controller = new $controller;
