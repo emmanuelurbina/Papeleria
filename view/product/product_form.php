@@ -13,7 +13,7 @@
   <section class="main">
     <article class="main__form">
       <h2 class="form__title">
-        Product
+        Producto
       </h2>
       <form class="form" action="?controller=product&action=save" method="post">
         <input type="hidden" id="id" name="id" value="<?= $product->id ?>">
