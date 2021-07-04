@@ -19,8 +19,9 @@ if (!isset($_REQUEST['controller']) || !isset($_REQUEST['action'])) {
     $controller = ucwords($controller) . 'Controller';
     $controller = new $controller;
     call_user_func(array($controller, $action));
+
   } else {
     $document = 'view/404.php';
-    require_once $document;
+    require_once 'view/404.php';
   }
 }

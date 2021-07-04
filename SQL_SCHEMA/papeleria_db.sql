@@ -82,6 +82,7 @@ CREATE TABLE IF NOT EXISTS `sell_ticket` (
 -- Restricciones para tablas volcadas
 --
 
+ALTER TABLE `products` CHANGE `supplier` `supplier` INT NOT NULL DEFAULT '1';
 --
 -- Filtros para la tabla `sell_product`
 --

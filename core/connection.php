@@ -14,7 +14,7 @@ class Connection
     $this->host = getenv('APP_HOST');
     $this->user = getenv('APP_USER');
     $this->password = getenv('APP_PASSWORD');
-    $this->dbName = getenv('DB_NAME');
+    $this->dbName = getenv('APP_DBNAME');
     try {
       $pdo = new PDO("{$this->driver}:host={$this->host};dbname={$this->dbName};charset={$this->charset}", $this->user, $this->password);
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
