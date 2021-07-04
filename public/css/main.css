@@ -85,6 +85,10 @@ body {
   box-shadow: -4px 4px 0px #42E2B8;
 }
 
+input:disabled {
+  color: #42E2B8;
+  font-weight: 700;
+}
 @media screen and (max-width:900px) {
   .main__form {
     width: 60%;
@@ -92,6 +96,13 @@ body {
 }
 
 @media screen and (max-width:600px) {
+  body{
+    padding: 16px;
+  }
+  .main{
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
   .main__form {
     width: 100%;
   }

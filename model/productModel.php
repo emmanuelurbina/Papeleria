@@ -36,6 +36,13 @@ class ProductModel extends Crud
   {
     try {
       //code...
+      $stm = $this->pdo->prepare("UPDATE  " . self::TABLE . " SET name=?,description=?,price=? WHERE id=?");
+      $stm->execute(array(
+        $this->name,
+        $this->description,
+        $this->price,
+        $this->id
+      ));
     } catch (\PDOException $e) {
       //throw $e;
       echo $e->getMessage();
