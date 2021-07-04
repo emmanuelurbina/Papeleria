@@ -25,11 +25,13 @@ class ProductController
     $product->name = $_REQUEST['name'];
     $product->description = $_REQUEST['description'];
     $product->price = $_REQUEST['price'];
+
     if ($product->id > 0) {
       $product->update();
     } else {
       $product->create();
     }
-    header('Location: index.php');
+
+    header('Location: index.php?controller=product&action=show&message=ok');
   }
 }

@@ -71,8 +71,8 @@ body {
   font-size: 14px;
   border: 2px solid #0F0A0A;
   box-sizing: border-box;
-
-  border-radius: 90px;
+  box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
   background: transparent;
 }
 
@@ -80,15 +80,19 @@ body {
   background: #42E2B8;
 }
 
-.btn-primary:hover {
-  border: 2px solid #42E2B8;
-  box-shadow: -4px 4px 0px #42E2B8;
+.btn:hover {
+  box-shadow: inset -4px 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+  box-shadow: inset -4px 4px 14px rgba(0, 0, 0, 0.45);
 }
 
 input:disabled {
   color: #42E2B8;
   font-weight: 700;
 }
+
 @media screen and (max-width:900px) {
   .main__form {
     width: 60%;
@@ -96,10 +100,10 @@ input:disabled {
 }
 
 @media screen and (max-width:600px) {
-  body{
+  body {
     padding: 16px;
   }
-  .main{
+  .main {
     justify-content: flex-start;
     align-items: flex-start;
   }

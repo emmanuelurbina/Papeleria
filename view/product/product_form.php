@@ -35,6 +35,11 @@
           <label for="price" aria-label="Precio del producto">Precio</label>
           <input type="number" step="any" min="0" id="price" name="price" title="Caja para registrar precio" value="<?= $product->price > 0? $product->price:0 ?>" autocomplete="off">
         </div>
+        <?php
+          if(isset($_REQUEST["message"])) {
+            echo "Guardado";
+          }
+        ?>
         <button type="submit" class="btn btn-primary" title='Boton guardar'>Guardar</button>
       </form>
     </article>
