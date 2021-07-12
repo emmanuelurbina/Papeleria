@@ -16,6 +16,18 @@ class ProductModel extends Crud
     parent::__construct(self::TABLE);
     $this->pdo = parent::connect();
   }
+  public function get_by_sku($sku)
+  {
+    /** RETORNA EL ELEMENTO QUE HAGA MATCH CON @sku */
+    try {
+      //code...
+      $stm = $this->pdo->prepare("SELECT * FROM " . self::TABLE . " WHERE sku=? ");
+      $stm->execute(array($sku));
+      return $stm->fetch(PDO::FETCH_OBJ);
+    } catch (\PDOException $e) {
+      echo $e->getMessage();
+    }
+  }
   public function create()
   {
     try {

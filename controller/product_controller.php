@@ -7,6 +7,16 @@ class ProductController
   {
     $this->model = new ProductModel();
   }
+
+  public function search_product()
+  {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_REQUEST['sku'])) {
+      $sku = $_REQUEST['sku'];
+      $response = new ProductModel();
+      $response = $this->model->get_by_sku($sku);
+    }
+    require_once "view/product/product_consult.php";
+  }
   public function show()
   {
     $product = new ProductModel();
