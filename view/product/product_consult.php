@@ -16,6 +16,7 @@
         Consulta Productos
       </h2>
       <form class="form" action="?controller=product&action=search_product" method="post">
+        
         <div class="group__form">
           <label for="sku" aria-label="SKU del producto">Codigo SKU</label>
           <input type="text" id="sku" name="sku" title="" required>

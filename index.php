@@ -1,4 +1,5 @@
 <?php
+
 /** Lectura de archivos .env */
 require_once "core/dotenv.php";
 (new DotEnv('.env'))->load();
